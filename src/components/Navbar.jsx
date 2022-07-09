@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
 import { Link } from "react-router-dom";
-import Aglet from "../assets/aglet_logo.svg";
+import Aglet from "../assets/pictures/aglet_logo.svg";
 
 const Navbar = () => {
   const [click, setClick] = useState(false);
@@ -16,12 +16,12 @@ const Navbar = () => {
         </div>
 
         <ul className={click ? "nav-menu active" : "nav-menu"}>
-          <Link to="/">
+          <Link to="/" className="nav-link">
             <li className="nav-item" onClick={handleClick}>
               home
             </li>
           </Link>
-          <Link to="/contact">
+          <Link to="/contact" className="nav-link">
             <li className="nav-item" onClick={handleClick}>
               contact
             </li>

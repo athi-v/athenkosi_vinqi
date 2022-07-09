@@ -1,6 +1,6 @@
 import React from "react";
 import { FaFacebookF, FaGooglePlusG, FaTwitter } from "react-icons/fa";
-import Contactimg from "../assets/contact-image.jpg";
+import Contactimg from "../assets/pictures/contact-image.jpg";
 const Contact = () => {
   return (
     <div className="contact">

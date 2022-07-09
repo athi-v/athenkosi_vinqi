@@ -3,8 +3,8 @@ import Slider from '../components/Slider'
 
 const Hero = () => {
   return (
-    <div>
-      <Slider />
+    <div className='hero'>
+        <Slider />
     </div>
   )
 }

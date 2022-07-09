@@ -8,12 +8,9 @@ body {
   font-family: "Inter", sans-serif;
   background-color: black;
   color: white;
+
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
-}
 ul {
   list-style: none;
 }
@@ -23,22 +20,24 @@ h1 {
   letter-spacing: 10px;
   color: grey;
 }
+
+.grey {
+  color: grey;
+}
 /* Navbar  */
 header {
-  width: 100%;
+  /* width: 100%; */
   height: 100px;
 }
 
 header .navbar {
-
-  max-width: 1240px;
+  /* max-width: 1240px; */
   height: 100%;
   padding: 0 1rem;
   margin: auto;
   overflow: hidden;
   display: flex;
   justify-content: space-between;
-
 }
 
 header .logo {
@@ -48,7 +47,7 @@ header .logo {
 
 header .logo img {
   width: 80px;
-  height: auto;
+  /* height: auto; */
 }
 
 header .toggler {
@@ -57,8 +56,6 @@ header .toggler {
   top: 2.5rem;
   right: 1rem;
   z-index: 99;
-
-
 }
 
 .nav-menu {
@@ -67,37 +64,138 @@ header .toggler {
   justify-self: center;
 }
 
+.nav-link {
+  text-decoration: none;
+}
 .nav-item {
   padding: 0 1.5rem;
+  color: white;
+  text-decoration: none;
+}
+
+.nav-item:hover {
+  border-bottom: solid 5px white;
 }
 
 @media screen and (max-width: 960px) {
   header .toggler {
+    position: fixed;
     display: block;
     cursor: pointer;
   }
 
   header .nav-menu {
-    color: black;
     position: fixed;
+    justify-content: center;
+    align-items: flex-start;
+    color: black;
     right: -100%;
     flex-direction: column;
-    justify-content: center;
     width: 100%;
     height: 100%;
+    overflow: hidden;
     background-color: white;
-    text-align: center;
     transition: 0.4s;
     z-index: 99;
-
   }
 
   header .nav-menu.active {
     right: 0;
-    position: fixed;
+    /* position: fixed; */
+  }
 
+  .nav-item {
+    color: black;
+    font-size: 4rem;
+    font-weight: 700;
+    padding: 5px 0 0 0;
+  }
+  .nav-item:hover {
+    border-bottom: solid 5px black;
+  }
+}
+
+/* Hero */
+.slider {
+  max-width: 100%;
+  height: 7vh;
+}
+
+.slider .container {
+  /* max-width: 1240px; */
+  
+  padding: 0 1rem;
+  margin: auto;
+}
+
+.slider .col {
+  display: flex;
+  flex-direction: row;
+  padding: 5rem 0 6rem 0;
+  overflow-x: scroll;
+}
+
+.slider .vid video {
+  max-width: 520px;
+}
+
+::-webkit-scrollbar {
+width: 10%;
+height: 3px;}
+
+
+::-webkit-scrollbar-track {
+
+  box-shadow: inset 0 0 3px grey;
+}
+
+::-webkit-scrollbar-thumb {
+  width: 10px;
+  background-color: gray;
+}
+::-webkit-scrollbar-button {
+  width: 250px;
+}
+
+.slider .abs {
+margin: 15px 0 0 20px;
+}
+
+/* video {
+  transition: opacity 1s ease-in-out;
+  opacity: 0.2;
+} */
+
+video:hover {
+  opacity: 1;
+}
+
+
+@media screen and (max-width: 960px) {
+  
+  .slider .container {
+    padding: 0;
+  }
+  .slider .content .vid {
+    position: relative;
+    width: 500px;
+    height: 30vh;
+    top: 50%;
 
   }
+
+  .slider .abs {
+    position: absolute;
+    top: 50%;
+  }
+
+  .slider .col {
+    padding: 0;
+    /* display: flex; */
+    flex-direction: column;
+    overflow: hidden;
+  }
+
 }
 
 /* Contact */
@@ -130,7 +228,6 @@ header .toggler {
 
 .contact .image img {
   width: 100%;
-  
 }
 
 .contact .col-2 {
@@ -146,10 +243,9 @@ header .toggler {
 }
 
 @media screen and (max-width: 960px) {
-
   h1 {
     font-size: 50px;
- }
+  }
 
   .contact .col-2 {
     padding: 10rem 0 0 1rem;
@@ -158,7 +254,5 @@ header .toggler {
   .contact .image img {
     width: 100%;
   }
-
-  
 }
 
