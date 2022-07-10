@@ -56,8 +56,8 @@ const Slider = () => {
                   preload="none"
                 />
                 <div className="abs">
-                <h3>Grow up stage</h3>
-                  <p className="grey">Mercedes-Benz Modul</p>
+                <h3>Grow up</h3>
+                  <p className="grey">Stories of a new generation</p>
                 </div>
               </div>
             </div>
@@ -72,8 +72,8 @@ const Slider = () => {
                   preload="none"
                 />
                 <div className="abs">
-                <h3>Making of</h3>
-                  <p className="grey">Mercedes-Benz Concept</p>
+                <h3>Luxury in motion</h3>
+                  <p className="grey">The FO15 concept car</p>
                 </div>
               </div>
             </div>
@@ -88,8 +88,8 @@ const Slider = () => {
                   preload="none"
                 />
                 <div className="abs">
-                  <h3>Time to look up again</h3>
-                  <p className="grey">Mercedes-Benz</p>
+                  <h3>Unleash your senses</h3>
+                  <p className="grey">The new C-Class cabriolet</p>
                 </div>
               </div>
             </div>
@@ -105,7 +105,7 @@ const Slider = () => {
                 />
                 <div className="abs">
                   <h3>Easy Rider</h3>
-                  <p className="grey">Mercedes-Benz</p>
+                  <p className="grey">Mercedes AMG GT C Roadster</p>
                 </div>
               </div>
             </div>
@@ -120,8 +120,8 @@ const Slider = () => {
                   preload="none"
                 />
                 <div className="abs">
-                  <h3>Snack</h3>
-                  <p className="grey">Katjes</p>
+                  <h3>Jes! All veggie</h3>
+                  <p className="grey">Our first ever sweets campaign</p>
                 </div>
               </div>
             </div>
@@ -215,8 +215,8 @@ const Slider = () => {
                   preload="none"
                 />
                 <div className="abs">
-                  <h3>EQ</h3>
-                  <p className="grey">Mercedes-Benz</p>
+                  <h3>Flip the switch</h3>
+                  <p className="grey">Electric Intelligence by Mercedes</p>
                 </div>
               </div>
             </div>
@@ -230,8 +230,8 @@ const Slider = () => {
                   preload="none"
                 />
                 <div className="abs">
-                  <h3>Mercedes Leon</h3>
-                  <p className="grey">Mercedes-Benz G-Class</p>
+                  <h3>Stronger than time</h3>
+                  <p className="grey">The new G-Class</p>
                 </div>
               </div>
             </div>
