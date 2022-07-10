@@ -16,16 +16,16 @@ const Navbar = () => {
         </div>
 
         <ul className={click ? "nav-menu active" : "nav-menu"}>
-          <Link to="/" className="nav-link">
-            <li className="nav-item" onClick={handleClick}>
+          <li className="nav-item" onClick={handleClick}>
+            <Link to="/" className="nav-link">
               home
-            </li>
-          </Link>
-          <Link to="/contact" className="nav-link">
-            <li className="nav-item" onClick={handleClick}>
+            </Link>
+          </li>
+          <li className="nav-item" onClick={handleClick}>
+            <Link to="/contact" className="nav-link">
               contact
-            </li>
-          </Link>
+            </Link>
+          </li>
         </ul>
 
         <div className="toggler" onClick={handleClick}>

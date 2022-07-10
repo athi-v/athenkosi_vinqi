@@ -69,13 +69,30 @@ header .toggler {
 }
 .nav-item {
   padding: 0 1.5rem;
+}
+.nav-link {
   color: white;
-  text-decoration: none;
+
+  display: inline-block;
+  position: relative;
 }
 
-.nav-item:hover {
-  border-bottom: solid 5px white;
+.nav-link:after {
+  background:  none repeat scroll 0 0 transparent;
+  bottom: 0;
+  content: "";
+  display: block;
+  height: 2px;
+  position: absolute;
+  background: #fff;
+  transition: 0.5s ease-out;
+  width: 0;
 }
+.nav-link:hover:after {
+  width: 100%;
+  left: 0;
+}
+
 
 @media screen and (max-width: 960px) {
   header .toggler {
@@ -104,15 +121,19 @@ header .toggler {
     /* position: fixed; */
   }
 
-  .nav-item {
+  .nav-link {
     color: black;
     font-size: 4rem;
     font-weight: 700;
     padding: 5px 0 0 0;
   }
-  .nav-item:hover {
-    border-bottom: solid 5px black;
+
+  .nav-link:after {
+  background:#000;
   }
+
+ 
+
 }
 
 /* Hero */
@@ -161,14 +182,18 @@ height: 3px;}
 margin: 15px 0 0 20px;
 }
 
-/* video {
-  transition: opacity 1s ease-in-out;
+ /* video {
+  transition: 1s ease-in-out;
+}
+
+ video {
   opacity: 0.2;
+}
+
+ video:hover {
+  opacity: 1;
 } */
 
-video:hover {
-  opacity: 1;
-}
 
 
 @media screen and (max-width: 960px) {
@@ -178,8 +203,8 @@ video:hover {
   }
   .slider .content .vid {
     position: relative;
-    width: 500px;
-    height: 30vh;
+    /* width: 4px; */
+    height: 25vh;
     top: 50%;
 
   }
