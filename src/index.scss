@@ -32,7 +32,7 @@ ul {
 }
 
 //heading 1
-//font size incremented more 
+//font size incremented more
 //spacing between letters set to 10px
 // font color use is grey
 h1 {
@@ -40,9 +40,17 @@ h1 {
   letter-spacing: 10px;
   color: $color_2;
 }
-
+span {
+  font-weight: bold;
+}
+h3 {
+  font-size: 30px;
+  font-weight: 900;
+}
 .grey {
   color: $color_2;
+  font-size: 20px;
+  font-weight: 700;
 }
 
 //Navigation has height of 100px
@@ -118,13 +126,13 @@ h1 {
     cursor: grab;
   }
 }
-  //texts layered on top the video
+//texts layered on top the video
 .abs {
   margin: 15px 0 0 20px;
 }
 
-  // the heading laying on top of the image 
-  //padded top 3% and 12% left
+// the heading laying on top of the image
+//padded top 3% and 12% left
 .ok {
   position: absolute;
   padding: 3% 0 0 12%;
@@ -137,43 +145,42 @@ h1 {
     padding: 0 10rem;
   }
 
-    // the contact is split in two divs, col-1 and 2
+  // the contact is split in two divs, col-1 and 2
   .content {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
-  // contact image set to 100% width 
+// contact image set to 100% width
 .image {
   img {
     width: 100%;
   }
 }
 
-  // the contact is split in two divs, col-1 and 2
-  // col-2 padded 20rem top and 4rem left
+// the contact is split in two divs, col-1 and 2
+// col-2 padded 20rem top and 4rem left
 
 .col-2 {
   padding: 20rem 0 0 4rem;
 }
 
-  // paragraphs on contact
+// paragraphs on contact
 .para {
   margin: 0 0 2rem 0;
 }
 
-  //icon spaced
+//icon spaced
 .spacing {
   margin: 0 1rem 0 1rem;
 }
 
-
 //Mobile view
 //used media queries for any devices <=960px
 @media screen and (max-width: 960px) {
- //on mobile body padding set to 0
- 
+  //on mobile body padding set to 0
+
   body {
     padding: 0;
   }
@@ -190,8 +197,7 @@ h1 {
     height: 0;
   }
 
-  
-  //mobile menu 
+  //mobile menu
   //takes full when opened with a transition, background set to white
   //opens on the right
   .nav-menu {
@@ -240,10 +246,10 @@ h1 {
   //texts layered on top the video
   .abs {
     position: absolute;
-    top: 50%;
+    top: 30%;
   }
 
-    //Instead of slider(row view), column is used
+  //Instead of slider(row view), column is used
   .col {
     padding: 0;
     flex-direction: column;
@@ -251,10 +257,18 @@ h1 {
   }
 
   // Contact
-  //font size decremented to adapt on mobile 
+  //font size decremented to adapt on mobile
 
   h1 {
     font-size: 60px;
+  }
+  h3 {
+    font-size: 20px;
+  }
+
+  .grey {
+    color: $color_1;
+    font-size: 15px;
   }
 
   //contact padded top-bottom by 6rem and 0.5 left-right
@@ -262,7 +276,7 @@ h1 {
     padding: 6rem 0.5rem;
   }
 
-  // the heading laying on top of the image 
+  // the heading laying on top of the image
   //padded top 1% and 24% left
   .ok {
     padding: 1% 0 0 24%;

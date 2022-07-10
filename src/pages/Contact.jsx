@@ -25,15 +25,15 @@ const Contact = () => {
 
           <div className="col-2">
             <div className="para">
-              <p>my name is Athenkosi Vinqi,</p>
+              <p>my name is <span>Athenkosi Vinqi</span>,</p>
               <p>and I am currently watching</p>
-              <p>a series called Stranger Things</p>
+              <p>a series called <span>Stranger Things</span></p>
             </div>
 
             <div className="para">
               <p>you can reach me on:</p>
-              <p>tel: 073 390 1637</p>
-              <p>email: athenkosivinqi25@gmail.com</p>
+              <p><span>tel:</span> 073 390 1637</p>
+              <p><span>email:</span> athenkosivinqi25@gmail.com</p>
             </div>
 
             <div className="para">
