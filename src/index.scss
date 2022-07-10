@@ -1,287 +1,245 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+$color_1: white;
+$color_2: grey;
+$color_3:black;
+$font-family_1: "Inter", sans-serif;
+$background-color_1: black;
+
+/* Hero */
+/* Contact */
 * {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
 }
 body {
-  font-family: "Inter", sans-serif;
-  background-color: black;
-  color: white;
-
+	font-family: $font-family_1;
+	background-color: $background-color_1;
+	color: $color_1;
+	padding: 0 1rem;
 }
-
 ul {
-  list-style: none;
+	list-style: none;
 }
-
 h1 {
-  font-size: 200px;
-  letter-spacing: 10px;
-  color: grey;
+	font-size: 200px;
+	letter-spacing: 10px;
+	color: $color_2;
 }
-
 .grey {
-  color: grey;
+	color: $color_2;
 }
-/* Navbar  */
-header {
-  /* width: 100%; */
-  height: 100px;
-}
+//Navbar {
+	.navbar {
+		height: 100px;
+		overflow: hidden;
+		display: flex;
+		justify-content: space-between;
+	}
 
-header .navbar {
-  /* max-width: 1240px; */
-  height: 100%;
-  padding: 0 1rem;
-  margin: auto;
-  overflow: hidden;
-  display: flex;
-  justify-content: space-between;
+.logo {
+	display: flex;
+	align-items: center;
+	img {
+		width: 80px;
+	}
 }
-
-header .logo {
-  display: flex;
-  align-items: center;
+.toggler {
+	display: none;
+	position: absolute;
+	top: 2.5rem;
+	right: 1rem;
+	z-index: 99;
 }
-
-header .logo img {
-  width: 80px;
-  /* height: auto; */
-}
-
-header .toggler {
-  display: none;
-  position: absolute;
-  top: 2.5rem;
-  right: 1rem;
-  z-index: 99;
-}
-
 .nav-menu {
-  display: flex;
-  align-items: center;
-  justify-self: center;
+	display: flex;
+	align-items: center;
+	justify-self: center;
 }
-
 .nav-link {
-  text-decoration: none;
+	text-decoration: none;
+	color: $color_1;
+	display: inline-block;
+	position: relative;
+	&:after {
+		background: none repeat scroll 0 0 transparent;
+		bottom: 0;
+		content: "";
+		display: block;
+		height: 3px;
+		position: absolute;
+		background: $color_1;
+		transition: 0.5s ease-out;
+		width: 0;
+	}
+	&:hover {
+		&:after {
+			width: 100%;
+			left: 0;
+		}
+	}
 }
 .nav-item {
-  padding: 0 1.5rem;
+	padding: 0 1.5rem;
 }
-.nav-link {
-  color: white;
-
-  display: inline-block;
-  position: relative;
+.col {
+	display: flex;
+	flex-direction: row;
+	padding: 9rem 0 6rem 0;
+	overflow-x: scroll;
+}
+.vid {
+	video {
+		max-width: 520px;
+		cursor: grab;
+	}
+}
+.abs {
+	margin: 15px 0 0 20px;
+}
+.ok {
+	position: absolute;
+	padding: 3% 0 0 12%;
+}
+.contact {
+	.container {
+		max-width: 1240px;
+		padding: 0 10rem;
+	}
+	.content {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+	}
+}
+.image {
+	img {
+		width: 100%;
+	}
+}
+.col-2 {
+	padding: 20rem 0 0 4rem;
+}
+.para {
+	margin: 0 0 2rem 0;
+}
+.spacing {
+	margin: 0 1rem 0 1rem;
 }
 
-.nav-link:after {
-  background:  none repeat scroll 0 0 transparent;
-  bottom: 0;
-  content: "";
-  display: block;
-  height: 2px;
-  position: absolute;
-  background: #fff;
-  transition: 0.5s ease-out;
-  width: 0;
-}
-.nav-link:hover:after {
-  width: 100%;
-  left: 0;
-}
 
 
+
+//Mobile view
 @media screen and (max-width: 960px) {
-  header .toggler {
+  body {
+    padding: 0;
+  }
+
+  // Navbar
+  .toggler {
     position: fixed;
     display: block;
     cursor: pointer;
   }
 
-  header .nav-menu {
+  .navbar {
+    height: 0; }
+
+  .nav-menu {
     position: fixed;
     justify-content: center;
     align-items: flex-start;
-    color: black;
+    color: $color_3;
     right: -100%;
     flex-direction: column;
     width: 100%;
     height: 100%;
     overflow: hidden;
-    background-color: white;
+    background-color: $color_1;
     transition: 0.4s;
     z-index: 99;
   }
 
-  header .nav-menu.active {
+  .nav-menu.active {
     right: 0;
-    /* position: fixed; */
   }
 
   .nav-link {
-    color: black;
+    color: $color_3;
     font-size: 4rem;
     font-weight: 700;
     padding: 5px 0 0 0;
   }
 
   .nav-link:after {
-  background:#000;
+    background: $background-color_1;
   }
 
- 
+  // Hero
 
-}
-
-/* Hero */
-.slider {
-  max-width: 100%;
-  height: 7vh;
-}
-
-.slider .container {
-  /* max-width: 1240px; */
-  
-  padding: 0 1rem;
-  margin: auto;
-}
-
-.slider .col {
-  display: flex;
-  flex-direction: row;
-  padding: 5rem 0 6rem 0;
-  overflow-x: scroll;
-}
-
-.slider .vid video {
-  max-width: 520px;
-  cursor: grab;
-}
-
-::-webkit-scrollbar {
-width: 10%;
-height: 3px;
-}
-
-
-::-webkit-scrollbar-track {
-
-  box-shadow: inset 0 0 3px grey;
-}
-
-::-webkit-scrollbar-thumb {
-  width: 10px;
-  background-color: gray;
-}
-::-webkit-scrollbar-button {
-  width: 350px;
-  cursor: grab;
-
-}
-
-.slider .abs {
-margin: 15px 0 0 20px;
-}
-
- /* video {
-  transition: 1s ease-in-out;
-}
-
- video {
-  opacity: 0.2;
-}
-
- video:hover {
-  opacity: 1;
-} */
-
-
-
-@media screen and (max-width: 960px) {
-  
-  .slider .container {
-    padding: 0;
-  }
-  .slider .content .vid {
+   .vid {
     position: relative;
-    /* width: 4px; */
     height: 25vh;
     top: 50%;
-
   }
+.vid video {
+  max-width: 100%;
 
-  .slider .abs {
+}
+
+  .abs {
     position: absolute;
     top: 50%;
   }
 
-  .slider .col {
+  .col {
     padding: 0;
-    /* display: flex; */
     flex-direction: column;
     overflow: hidden;
   }
 
-}
-
-/* Contact */
-.contact {
-  width: 100%;
-  height: 100vh;
-}
-.contact .ok {
-  position: absolute;
-  padding: 5% 0 0 25%;
-}
-
-.contact .container {
-  max-width: 1240px;
-  padding: 0 1rem;
-  margin: auto;
-}
-
-.contact .content {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-}
-
-.contact .col-1 {
-  padding: 1rem 1rem 1rem 0;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-.contact .image img {
-  width: 100%;
-}
-
-.contact .col-2 {
-  padding: 20rem 0 0 4rem;
-}
-
-.contact .para {
-  margin: 0 0 2rem 0;
-}
-
-.contact .spacing {
-  margin: 0 1rem 0 1rem;
-}
-
-@media screen and (max-width: 960px) {
+  // Contact
   h1 {
-    font-size: 50px;
+    font-size: 60px;
+  }
+  .contact .container {
+    padding: 6rem 0.5rem;
   }
 
-  .contact .col-2 {
-    padding: 10rem 0 0 1rem;
+  .ok {
+    padding: 1% 0 0 24%;
+  }
+  .col-2 {
+    padding: 6rem 0 2rem 0.2rem;
   }
 
-  .contact .image img {
-    width: 100%;
+  .image img {
+    padding: 20% 0 0 0;
+    width: 150px;
   }
+  .para {
+font-size: 10px;  }
+.spacing {
+  margin: 0 1rem 0 0.5rem;
+}
 }
 
+
+//Customisation of scrollbar
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 3px $color_2;
+}
+
+::-webkit-scrollbar {
+  width: 10%;
+  height: 3px;
+}
+
+::-webkit-scrollbar-thumb {
+  width: 10px;
+  background-color: $color_2;
+}
+::-webkit-scrollbar-button {
+  width: 350px;
+}
