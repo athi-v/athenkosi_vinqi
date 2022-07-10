@@ -32,8 +32,8 @@ const Contact = () => {
 
             <div className="para">
               <p>you can reach me on:</p>
-              <p><span>tel:</span> 073 390 1637</p>
-              <p><span>email:</span> athenkosivinqi25@gmail.com</p>
+              <p><span>tel:</span> <a href="tel:0733901637">073 390 1637</a></p>
+              <p><span>email:</span>  <a href="mailto:athenkosivinqi25@gmail.com?subject=Aglet Frontend Developer Vacancy&body=">athenkosivinqi25@gmail.com</a></p>
             </div>
 
             <div className="para">
