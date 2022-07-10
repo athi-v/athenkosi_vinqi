@@ -158,11 +158,13 @@ header .toggler {
 
 .slider .vid video {
   max-width: 520px;
+  cursor: grab;
 }
 
 ::-webkit-scrollbar {
 width: 10%;
-height: 3px;}
+height: 3px;
+}
 
 
 ::-webkit-scrollbar-track {
@@ -175,7 +177,9 @@ height: 3px;}
   background-color: gray;
 }
 ::-webkit-scrollbar-button {
-  width: 250px;
+  width: 350px;
+  cursor: grab;
+
 }
 
 .slider .abs {

@@ -27,6 +27,8 @@ import Vid12 from "../assets/videos/F1_stage.mp4"
 
 
 const Slider = () => {
+  
+  
   const sMovie = (e) => {
     e.target.pause();
     console.log("off");
