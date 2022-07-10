@@ -1,142 +1,185 @@
+//I imported Inter from Google fonts
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
 
 $color_1: white;
 $color_2: grey;
-$color_3:black;
+$color_3: black;
 $font-family_1: "Inter", sans-serif;
 $background-color_1: black;
 
 /* Hero */
 /* Contact */
 * {
-	box-sizing: border-box;
-	padding: 0;
-	margin: 0;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
 }
-body {
-	font-family: $font-family_1;
-	background-color: $background-color_1;
-	color: $color_1;
-	padding: 0 1rem;
-}
-ul {
-	list-style: none;
-}
-h1 {
-	font-size: 200px;
-	letter-spacing: 10px;
-	color: $color_2;
-}
-.grey {
-	color: $color_2;
-}
-//Navbar {
-	.navbar {
-		height: 100px;
-		overflow: hidden;
-		display: flex;
-		justify-content: space-between;
-	}
 
-.logo {
-	display: flex;
-	align-items: center;
-	img {
-		width: 80px;
-	}
+//background color set to black
+//font used is Inter
+//font color white
+//padding set to 0 [top and bottom] and 1rem [left and right]
+body {
+  font-family: $font-family_1;
+  background-color: $background-color_1;
+  color: $color_1;
+  padding: 0 1rem;
 }
+
+//lst style set to none to remove bullets
+ul {
+  list-style: none;
+}
+
+//heading 1
+//font size incremented more 
+//spacing between letters set to 10px
+// font color use is grey
+h1 {
+  font-size: 200px;
+  letter-spacing: 10px;
+  color: $color_2;
+}
+
+.grey {
+  color: $color_2;
+}
+
+//Navigation has height of 100px
+//Navbar {
+.navbar {
+  height: 100px;
+  overflow: hidden;
+  display: flex;
+  justify-content: space-between;
+}
+
+//aglet logo image set 80px in width
+.logo {
+  display: flex;
+  align-items: center;
+  img {
+    width: 80px;
+  }
+}
+
+//toggler set to none in desktop
 .toggler {
-	display: none;
-	position: absolute;
-	top: 2.5rem;
-	right: 1rem;
-	z-index: 99;
+  display: none;
+  position: absolute;
+  top: 2.5rem;
+  right: 1rem;
+  z-index: 99;
 }
 .nav-menu {
-	display: flex;
-	align-items: center;
-	justify-self: center;
+  display: flex;
+  align-items: center;
+  justify-self: center;
 }
+
+//links [contact and home]
+//hover animation
 .nav-link {
-	text-decoration: none;
-	color: $color_1;
-	display: inline-block;
-	position: relative;
-	&:after {
-		background: none repeat scroll 0 0 transparent;
-		bottom: 0;
-		content: "";
-		display: block;
-		height: 3px;
-		position: absolute;
-		background: $color_1;
-		transition: 0.5s ease-out;
-		width: 0;
-	}
-	&:hover {
-		&:after {
-			width: 100%;
-			left: 0;
-		}
-	}
+  text-decoration: none;
+  color: $color_1;
+  display: inline-block;
+  position: relative;
+  &:after {
+    background: none repeat scroll 0 0 transparent;
+    bottom: 0;
+    content: "";
+    display: block;
+    height: 3px;
+    position: absolute;
+    background: $color_1;
+    transition: 0.5s ease-out;
+    width: 0;
+  }
+  &:hover {
+    &:after {
+      width: 100%;
+      left: 0;
+    }
+  }
 }
 .nav-item {
-	padding: 0 1.5rem;
+  padding: 0 1.5rem;
 }
 .col {
-	display: flex;
-	flex-direction: row;
-	padding: 9rem 0 6rem 0;
-	overflow-x: scroll;
+  display: flex;
+  flex-direction: row;
+  padding: 9rem 0 6rem 0;
+  overflow-x: scroll;
 }
+
 .vid {
-	video {
-		max-width: 520px;
-		cursor: grab;
-	}
+  video {
+    max-width: 520px;
+    cursor: grab;
+  }
 }
+  //texts layered on top the video
 .abs {
-	margin: 15px 0 0 20px;
+  margin: 15px 0 0 20px;
 }
+
+  // the heading laying on top of the image 
+  //padded top 3% and 12% left
 .ok {
-	position: absolute;
-	padding: 3% 0 0 12%;
+  position: absolute;
+  padding: 3% 0 0 12%;
 }
+//contact page padded 10rem left-right
+//with a width of 1240px
 .contact {
-	.container {
-		max-width: 1240px;
-		padding: 0 10rem;
-	}
-	.content {
-		display: grid;
-		grid-template-columns: repeat(2, 1fr);
-	}
+  .container {
+    max-width: 1240px;
+    padding: 0 10rem;
+  }
+
+    // the contact is split in two divs, col-1 and 2
+  .content {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
+
+  // contact image set to 100% width 
 .image {
-	img {
-		width: 100%;
-	}
+  img {
+    width: 100%;
+  }
 }
+
+  // the contact is split in two divs, col-1 and 2
+  // col-2 padded 20rem top and 4rem left
+
 .col-2 {
-	padding: 20rem 0 0 4rem;
+  padding: 20rem 0 0 4rem;
 }
+
+  // paragraphs on contact
 .para {
-	margin: 0 0 2rem 0;
+  margin: 0 0 2rem 0;
 }
+
+  //icon spaced
 .spacing {
-	margin: 0 1rem 0 1rem;
+  margin: 0 1rem 0 1rem;
 }
-
-
 
 
 //Mobile view
+//used media queries for any devices <=960px
 @media screen and (max-width: 960px) {
+ //on mobile body padding set to 0
+ 
   body {
     padding: 0;
   }
 
   // Navbar
+  //toggler is displayed on mobile
   .toggler {
     position: fixed;
     display: block;
@@ -144,8 +187,13 @@ h1 {
   }
 
   .navbar {
-    height: 0; }
+    height: 0;
+  }
 
+  
+  //mobile menu 
+  //takes full when opened with a transition, background set to white
+  //opens on the right
   .nav-menu {
     position: fixed;
     justify-content: center;
@@ -177,22 +225,25 @@ h1 {
   }
 
   // Hero
-
-   .vid {
+  //.vid relative because so could be added on top
+  .vid {
     position: relative;
     height: 25vh;
     top: 50%;
   }
-.vid video {
-  max-width: 100%;
 
-}
+  //video takes full width
+  .vid video {
+    max-width: 100%;
+  }
 
+  //texts layered on top the video
   .abs {
     position: absolute;
     top: 50%;
   }
 
+    //Instead of slider(row view), column is used
   .col {
     padding: 0;
     flex-direction: column;
@@ -200,31 +251,45 @@ h1 {
   }
 
   // Contact
+  //font size decremented to adapt on mobile 
+
   h1 {
     font-size: 60px;
   }
+
+  //contact padded top-bottom by 6rem and 0.5 left-right
   .contact .container {
     padding: 6rem 0.5rem;
   }
 
+  // the heading laying on top of the image 
+  //padded top 1% and 24% left
   .ok {
     padding: 1% 0 0 24%;
   }
+
+  // the contact is split in two divs, col-1 and 2
+  // col-2 padded 6rem top, 2rem bottom and 0.2rem left
   .col-2 {
     padding: 6rem 0 2rem 0.2rem;
   }
 
+  // contact image width changed and padded top by 20%
   .image img {
     padding: 20% 0 0 0;
     width: 150px;
   }
-  .para {
-font-size: 10px;  }
-.spacing {
-  margin: 0 1rem 0 0.5rem;
-}
-}
 
+  // paragraphs on contact decreased
+  .para {
+    font-size: 10px;
+  }
+
+  //icon spaced
+  .spacing {
+    margin: 0 1rem 0 0.5rem;
+  }
+}
 
 //Customisation of scrollbar
 ::-webkit-scrollbar-track {

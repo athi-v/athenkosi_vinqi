@@ -1,5 +1,10 @@
 import React from "react";
+
+//a dependency from react-icons. react icons has plenty icons to choose from
+//here imported two that will be on mobile when menu is clicked or not clicked
 import { FaFacebookF, FaGooglePlusG, FaTwitter } from "react-icons/fa";
+
+// Contact image importted from the assets folder
 import Contactimg from "../assets/pictures/contact-image.jpg";
 const Contact = () => {
   return (
@@ -12,7 +17,9 @@ const Contact = () => {
     </div>
           <div className="col-1">
             <div className="image">
-              <img src={Contactimg} alt="/" />
+            
+{/* The contact image is already imported, simply just the curly braces and alias you used */}
+              <img src={Contactimg} alt="/" /> 
             </div>
           </div>
 
